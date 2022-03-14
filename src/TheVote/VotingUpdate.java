@@ -31,19 +31,21 @@ public class VotingUpdate {
         int n ,i,j;
         System.out.println("Enter Number of Voters");
         n=sc.nextInt();
-        // System.out.println("ID        Name        City");
         String rec[][]=new String[n][3];
         for(i=0;i<n;i++)
         {
             for(j=0;j<3;j++)
             {
-                System.out.println("Enter --> ID        Name        City");
-                rec[n][3]=sc.next();
+                if(j==0) System.out.println("Enter -> ID");
+                if(j==1) System.out.println("Enter -> Name");
+                if(j==2) System.out.println("Enter -> City");
+                rec[i][j]=sc.next();
             }
             System.out.println("User" +" "+ i);
         }
         System.out.println("Data you entered : ");
         for(String []x:rec)
+
         {
             for(String y:x)
             {
@@ -52,7 +54,6 @@ public class VotingUpdate {
             System.out.println();
         }
         Home();
-
     }
 
 
